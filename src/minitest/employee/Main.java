@@ -4,14 +4,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Employee[] employees = new Employee[6];
-        employees[0] = new PartTimeEmployee(1,"Dung",23,"0701111111","dungna.qn@gmail.com",150);
-        employees[1] = new FullTimeEmployee(2,"Full-time-Test1",21,"0701111112","test1@gmail.com",200000,50000,5000000);
-        employees[2] = new FullTimeEmployee(3,"Full-time-Test2",21,"0701111112","test1@gmail.com",190000,50000,5000000);
-        employees[3] = new FullTimeEmployee(4,"Full-time-Test3",21,"0701111112","test1@gmail.com",100000,50000,5000000);
-        employees[4] = new FullTimeEmployee(5,"Full-time-Test4",21,"0701111112","test1@gmail.com",150000,50000,5000000);
-        employees[5] = new PartTimeEmployee(6,"Part-time-Test5",22,"0701111113","test2@gmail.com",150);
-
+        Employee[] employees = getEmployees();
         double avg = avgSalaryOfEmployees(employees);
         System.out.println("Average salary of all employees: " + avg);
         System.out.println("Full-time employees have the salary less than average: ");
@@ -21,6 +14,18 @@ public class Main {
         System.out.println("Sort the full-time employees by salary ascending: ");
         sortEmployeesBySalaryAsc(employees);
     }
+
+    private static Employee[] getEmployees() {
+        Employee[] employees = new Employee[6];
+        employees[0] = new PartTimeEmployee(1, "Dung", 23, "0701111111", "dungna.qn@gmail.com", 150);
+        employees[1] = new FullTimeEmployee(2, "Full-time-Test1", 21, "0701111112", "test1@gmail.com", 200000, 50000, 5000000);
+        employees[2] = new FullTimeEmployee(3, "Full-time-Test2", 21, "0701111112", "test1@gmail.com", 190000, 50000, 5000000);
+        employees[3] = new FullTimeEmployee(4, "Full-time-Test3", 21, "0701111112", "test1@gmail.com", 100000, 50000, 5000000);
+        employees[4] = new FullTimeEmployee(5, "Full-time-Test4", 21, "0701111112", "test1@gmail.com", 150000, 50000, 5000000);
+        employees[5] = new PartTimeEmployee(6, "Part-time-Test5", 22, "0701111113", "test2@gmail.com", 150);
+        return employees;
+    }
+
 
     private static void sortEmployeesBySalaryAsc(Employee[] employees) {
         for (int i = 0; i < employees.length; i++) {
