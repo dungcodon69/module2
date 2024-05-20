@@ -1,4 +1,4 @@
-package session_testing_tdd.practice.calculator;
+package session_cleancode_refactoring.practice.seperatevariable;
 
 public class Main {
     public static void main(String[] args) {
